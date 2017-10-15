@@ -94,7 +94,7 @@ My final model consisted of the following layers:
 						|	
 | RELU					|												|
 | Dropout layer				| keep_prob = 0.5
-						|	
+					|	
 | Fully connected layer		| Input: 128, output: 43
 						
 									
@@ -189,6 +189,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 0.00X				| General caution 									|
 | 0.00X	      		| Priority road 					 					|
 | 0.00X				| Roundabout mandatory      							|
+
 
 
 * Second image [27 11 18 28 24]
