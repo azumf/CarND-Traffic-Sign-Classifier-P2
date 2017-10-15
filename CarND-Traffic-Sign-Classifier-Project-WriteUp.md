@@ -35,9 +35,9 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 !!!LINK!!!
 
-###Data Set Summary & Exploration
+**Data Set Summary & Exploration
 
-####1. Basic summary of the data set. 
+*1. Basic summary of the data set. 
 
 Summary statistics of the traffic signs data set using NumPy:
 
@@ -47,24 +47,20 @@ Summary statistics of the traffic signs data set using NumPy:
 * The shape of a traffic sign image is 32x32x3 as RGB image and, of course, 32x32x1 as grayscale image
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+*2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes. I have not added additional data to get an equal distribution of classes. Normalization and grayscaling the images showed good results. 
 
 <img src="classes_histogram.png " width="480" alt="Combined Image" />
 
-###Design and Test a Model Architecture
+**Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc
+*1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc
 
 
 
 
 As a first step, I decided to convert the images to grayscale because the RGB information (color) of the images did not lead to a great increase of information. Most traffic signs use the same colors like red, white and black. Of course there are some other traffic signs with other colors but overall more relevant are the shapes of the pictures than the colors.
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
 
 As a next and last step, I normalized the image data because ...
 Data Normalization
@@ -91,6 +87,10 @@ My final model consisted of the following layers:
 | Dropout layer				| keep_prob = 0.5											|	
 | Fully connected layer		| Input: 512, output: 128
 						|
+
+
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
 | RELU					|												|
 | Dropout layer				| keep_prob = 0.5											|	
 | Fully connected layer		| Input: 512, output: 43
