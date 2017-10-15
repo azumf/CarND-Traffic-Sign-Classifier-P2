@@ -51,7 +51,7 @@ Summary statistics of the traffic signs data set using NumPy:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes. I have not added additional data to get an equal distribution of classes. Normalization and grayscaling the images showed good results. 
 
-[image9]: /classes_histogram.png "histogram of classes"
+<img src="classes_histogram.png " width="480" alt="Combined Image" />
 
 ###Design and Test a Model Architecture
 
@@ -150,11 +150,16 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web. The image titles show the correct German names of the traffic signs (I am German ;-) )
 
-[sign 1]: ./new-traffic-signs/1.jpg "Vorfahrtsstrasse"
-[sign 2]: ./new-traffic-signs/2.jpg "Achtung Fussgaenger"
-[sign 3]: ./new-traffic-signs/3.jpg "Achtung Schnee"
-[sign 4]: ./new-traffic-signs/4.jpg "Gefaehrliche Kurve"
-[sign 5]: ./new-traffic-signs/5.jpg "Stopp"
+[sign 1]: /new-traffic-signs/1.jpg "Vorfahrtsstrasse"
+<img src="/new-traffic-signs/1.jpg " width="480" alt="Combined Image" />
+[sign 2]: /new-traffic-signs/2.jpg "Achtung Fussgaenger"
+<img src="/new-traffic-signs/2.jpg " width="480" alt="Combined Image" />
+[sign 3]: /new-traffic-signs/3.jpg "Achtung Schnee"
+<img src="/new-traffic-signs/3.jpg " width="480" alt="Combined Image" />
+[sign 4]: /new-traffic-signs/4.jpg "Gefaehrliche Kurve"
+<img src="/new-traffic-signs/4.jpg " width="480" alt="Combined Image" />
+[sign 5]: /new-traffic-signs/5.jpg "Stopp"
+<img src="/new-traffic-signs/5.jpg " width="480" alt="Combined Image" />
 
 The first image might be difficult to classify because they are not scaled to the input shape of the model. Of course that needs to be done in the first place, before preprocessing them like the training data set.
 
