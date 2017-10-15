@@ -158,14 +158,19 @@ Here are five German traffic signs that I found on the web. The image titles sho
 
 "Vorfahrtsstrasse"
 <img src="/new-traffic-signs/1.jpg " width="250"/>
+
 "Achtung Fussgaenger"
 <img src="/new-traffic-signs/2.jpg " width="250"/>
+
 "Achtung Schnee"
 <img src="/new-traffic-signs/3.jpg " width="250"/>
+
 "Gefaehrliche Kurve"
-<img src="/new-traffic-signs/4.jpg " width="250/>
+<img src="/new-traffic-signs/4.jpg " width="250"/>
+
 "Stopp"
-<img src="/new-traffic-signs/5.jpg " width="250/>
+<img src="/new-traffic-signs/5.jpg " width="250"/>
+
 
 The first image might be difficult to classify because they are not scaled to the input shape of the model. Of course that needs to be done in the first place, before preprocessing them like the training data set.
 
