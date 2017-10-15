@@ -1,7 +1,7 @@
-**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 ---
 
-**Build a Traffic Sign Recognition Project**
+## **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -24,19 +24,19 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+## **Writeup / README**
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/azumf/CarND-Traffic-Sign-Classifier-P2/blob/master/Traffic_Sign_Classifier.ipynb)
 
 
-**Data Set Summary & Exploration**
+## **Data Set Summary & Exploration**
 
-*1. Basic summary of the data set. 
+### **1. Basic summary of the data set.**
 
 Summary statistics of the traffic signs data set using NumPy:
 
@@ -46,24 +46,24 @@ Summary statistics of the traffic signs data set using NumPy:
 * The shape of a traffic sign image is 32x32x3 as RGB image and, of course, 32x32x1 as grayscale image
 * The number of unique classes/labels in the data set is 43
 
-*2. Include an exploratory visualization of the dataset.
+### **2. Include an exploratory visualization of the dataset.**
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes. I have not added additional data to get an equal distribution of classes. Normalization and grayscaling the images showed good results. 
 
 <img src="classes_histogram.png " width="480" alt="Combined Image" />
 
-**Design and Test a Model Architecture**
+### **Design and Test a Model Architecture**
 
-*1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc
+1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc:
 
-As a first step, I decided to convert the images to grayscale because the RGB information (color) of the images did not lead to a great increase of information. Most traffic signs use the same colors like red, white and black. Of course there are some other traffic signs with other colors but overall more relevant are the shapes of the pictures than the colors.
+*As a first step, I decided to convert the images to grayscale because the RGB information (color) of the images did not lead to a great increase of information. Most traffic signs use the same colors like red, white and black. Of course there are some other traffic signs with other colors but overall more relevant are the shapes of the pictures than the colors.
 
-As a next and last step, I normalized the image data because ...
+*As a next and last step, I normalized the image data because ...
 Data Normalization
 Then I normalized the gray-scale data between 0.1 and 0.9. This step is similar to the discussion in one of the TensorFlow lectures. This will prevent the model to overfit due to the large range between the values. Additional the normalization between 0.1 and 0.9 avoids possible problems by allowing data to be 0.
 
 
-**2. Final model architecture**
+### **2. Final model architecture**
 Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 I used a dictionary for weights and biases to which I referred within the model. Imo this looks more clear.
@@ -99,13 +99,11 @@ My final model consisted of the following layers:
 
 I implemented dropout layers after the fully connected layer to prevent overfitting of the model.
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used the Adam optimizer and as loss function I used the softmax cross entropy with logits as cost. 
+To train the model, I used the Adam optimizer and as loss function I used the softmax cross entropy with logits as cost. I minimized the cost with the Adam optimizer.
 
-I minimized the cost with the Adam optimizer.
-
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 To get a sufficient validation accuracy I played with the hyperparameters. First I adjusted the learning rate and checked the validation accuracy. I started with way too many epochs, so I reduced the amount of epochs further and further to avoid overfitting of the model on the training data. As well, I tried several test runs with different filter depth and neurons in the fully connected layer to get a compromise between run time and accuracy.
 
@@ -115,30 +113,37 @@ My final model results were:
 * test set accuracy of 0.948
 
 If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
---> The architecture of the network was not changed. The kept the amount of layer but I have changed the size of the network, in other words the number of parameters. Well, I assume adding a third convolutional layer will increase the accuracy further but my model achieved a sufficient performance for the project. Nevertheless, I think I will try out other model architectures, e.g. add an additional convolutional layer as well, independent from the submission.
+* *What was the first architecture that was tried and why was it chosen?
+
+*The architecture of the network was not changed. The kept the amount of layer but I have changed the size of the network, in other words the number of parameters. Well, I assume adding a third convolutional layer will increase the accuracy further but my model achieved a sufficient performance for the project. Nevertheless, I think I will try out other model architectures, e.g. add an additional convolutional layer as well, independent from the submission.
 
 * What were some problems with the initial architecture?
---> The first runs showed a poor performance with regards to validation accuracy. But tuning the hyperparameters and the number of model parameters helped a lot.
+
+* *The first runs showed a poor performance with regards to validation accuracy. But tuning the hyperparameters and the number of model parameters helped a lot.
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
---> I think this question got answered before within my project write up. :-)
 
-* Which parameters were tuned? How were they adjusted and why?
---> Learning rate was reduced (I started with a large one)
---> Number of model parameters was increased
---> Number of epochs was incrementally decreased from 100 to 25 to avoid overfitting of the model.
+* *I think this question got answered before within my project write up. :-)
+
+Which parameters were tuned? How were they adjusted and why?:
+* Learning rate was reduced (I started with a large one)
+* Number of model parameters was increased
+* Number of epochs was incrementally decreased from 100 to 25 to avoid overfitting of the model.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
---> Convolutional layers are working fine for image classification due to the extraction of different image features by scanning the image with the filter.
---> Dropout will avoid overfitting by turning off random neurons within the model. The data has to flow "in a different way" through the model in each iteration (I know, kind of an abstract description).
+
+* *Convolutional layers are working fine for image classification due to the extraction of different image features by scanning the image with the filter.
+* *Dropout will avoid overfitting by turning off random neurons within the model. The data has to flow "in a different way" through the model in each iteration (I know, kind of an abstract description).
 
 
 If a well known architecture was chosen:
 * What architecture was chosen?
---> I took the same architecture as in the TensorFlow lecture of "LeNet".
+
+* *I took the same architecture as in the TensorFlow lecture of "LeNet".
+
 * Why did you believe it would be relevant to the traffic sign application?
---> I finished the deep learning nanodegree right before I started with the CarNd and during the DPNd I learned that such a model architecture works well for these kind of classification tasks.
+
+* *I finished the deep learning nanodegree right before I started with the CarNd and during the DPNd I learned that such a model architecture works well for these kind of classification tasks.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 --> If the validation accuracy is in the same range as the training accuracy and the testing accuracy leads as well to high values (above 0.93 or 0.94) it is a good sign that the model did not overfit and is able to generalize on new data. 
 
