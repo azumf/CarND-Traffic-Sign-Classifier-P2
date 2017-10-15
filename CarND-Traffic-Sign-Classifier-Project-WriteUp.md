@@ -51,7 +51,7 @@ Summary statistics of the traffic signs data set using NumPy:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes. I have not added additional data to get an equal distribution of classes. Normalization and grayscaling the images showed good results. 
 
-[image9]: ./classes_histogram.png "histogram of classes"
+[image9]: /classes_histogram.png "histogram of classes"
 
 ###Design and Test a Model Architecture
 
@@ -88,8 +88,7 @@ My final model consisted of the following layers:
 | Max pooling		| 2x2 stride, same padding, outputs 5x5x32        									|
 | Fully connected layer		| Input: 800, output: 512     							|
 | RELU					|												|
-| Dropout layer				| keep_prob = 0.5
-						|	
+| Dropout layer				| keep_prob = 0.5											|	
 | Fully connected layer		| Input: 512, output: 128
 						|	
 | RELU					|												|
@@ -182,6 +181,8 @@ The model was able to correctly guess 3 of the 5 traffic signs, which gives an a
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
 * First image [11 30 18 12 40]
+
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0        			| Right-of-way 										| 
@@ -193,8 +194,10 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 * Second image [27 11 18 28 24]
+
+
 | Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
+|:---------------------:|:---------------------------------------------:|  
 | 0.995        			| Pedestrians										| 
 | 0.0045     			| Right-of-way  										|
 | 0.00035				| General caution 									|
@@ -202,6 +205,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 0.0X			    	| Road narrows right									|
 
 * Third image [30 23 28 11 29]
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.780        			| Snow											| 
@@ -212,6 +216,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 * Fourth image [11 41 32  6 36]
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.959        			| Right-of-way										| 
@@ -221,6 +226,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 0.0X			    	| Go straight or right								|
 
 * Fifth image [14 38 17 33  4]
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.999        			| Stop											|	 
