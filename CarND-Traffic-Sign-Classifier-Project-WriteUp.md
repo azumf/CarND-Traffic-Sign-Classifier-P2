@@ -31,11 +31,10 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/azumf/CarND-Traffic-Sign-Classifier-P2/blob/master/Traffic_Sign_Classifier.ipynb)
 
-!!!LINK!!!
 
-**Data Set Summary & Exploration
+**Data Set Summary & Exploration**
 
 *1. Basic summary of the data set. 
 
@@ -53,12 +52,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 <img src="classes_histogram.png " width="480" alt="Combined Image" />
 
-**Design and Test a Model Architecture
+**Design and Test a Model Architecture**
 
 *1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc
-
-
-
 
 As a first step, I decided to convert the images to grayscale because the RGB information (color) of the images did not lead to a great increase of information. Most traffic signs use the same colors like red, white and black. Of course there are some other traffic signs with other colors but overall more relevant are the shapes of the pictures than the colors.
 
@@ -67,7 +63,7 @@ Data Normalization
 Then I normalized the gray-scale data between 0.1 and 0.9. This step is similar to the discussion in one of the TensorFlow lectures. This will prevent the model to overfit due to the large range between the values. Additional the normalization between 0.1 and 0.9 avoids possible problems by allowing data to be 0.
 
 
-####2. Final model architecture
+**2. Final model architecture**
 Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 I used a dictionary for weights and biases to which I referred within the model. Imo this looks more clear.
