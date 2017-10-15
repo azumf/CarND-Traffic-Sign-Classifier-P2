@@ -150,28 +150,28 @@ If a well known architecture was chosen:
 
 *If the validation accuracy is in the same range as the training accuracy and the testing accuracy leads as well to high values (above 0.93 or 0.94) it is a good sign that the model did not overfit and is able to generalize on new data.*
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web. The image titles show the correct German names of the traffic signs (I am German ;-) )
 
 "Vorfahrtsstrasse"
-<img src="/new-traffic-signs/1.jpg " width="250" alt="Combined Image" />
+<img src="/new-traffic-signs/1.jpg " width="250"/>
 "Achtung Fussgaenger"
-<img src="/new-traffic-signs/2.jpg " width="250" alt="Combined Image" />
+<img src="/new-traffic-signs/2.jpg " width="250"/>
 "Achtung Schnee"
-<img src="/new-traffic-signs/3.jpg " width="250" alt="Combined Image" />
+<img src="/new-traffic-signs/3.jpg " width="250"/>
 "Gefaehrliche Kurve"
-<img src="/new-traffic-signs/4.jpg " width="250" alt="Combined Image" />
+<img src="/new-traffic-signs/4.jpg " width="250/>
 "Stopp"
-<img src="/new-traffic-signs/5.jpg " width="250" alt="Combined Image" />
+<img src="/new-traffic-signs/5.jpg " width="250/>
 
 The first image might be difficult to classify because they are not scaled to the input shape of the model. Of course that needs to be done in the first place, before preprocessing them like the training data set.
 
 To reshape them to 32x32x3, I used the cv2.resize() function.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
@@ -186,7 +186,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
@@ -248,6 +248,6 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 
