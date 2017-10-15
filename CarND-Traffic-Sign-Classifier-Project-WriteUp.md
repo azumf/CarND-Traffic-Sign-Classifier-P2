@@ -90,11 +90,13 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Dropout layer				| keep_prob = 0.5											|	
 | Fully connected layer		| Input: 512, output: 128
-						|	
+						|
 | RELU					|												|
-| Dropout layer				| keep_prob = 0.5
-					|	
-| Fully connected layer		| Input: 128, output: 43
+| Dropout layer				| keep_prob = 0.5											|	
+| Fully connected layer		| Input: 512, output: 43
+
+
+
 						
 									
  
@@ -150,16 +152,16 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web. The image titles show the correct German names of the traffic signs (I am German ;-) )
 
-[sign 1]: /new-traffic-signs/1.jpg "Vorfahrtsstrasse"
-<img src="/new-traffic-signs/1.jpg " width="480" alt="Combined Image" />
-[sign 2]: /new-traffic-signs/2.jpg "Achtung Fussgaenger"
-<img src="/new-traffic-signs/2.jpg " width="480" alt="Combined Image" />
-[sign 3]: /new-traffic-signs/3.jpg "Achtung Schnee"
-<img src="/new-traffic-signs/3.jpg " width="480" alt="Combined Image" />
-[sign 4]: /new-traffic-signs/4.jpg "Gefaehrliche Kurve"
-<img src="/new-traffic-signs/4.jpg " width="480" alt="Combined Image" />
-[sign 5]: /new-traffic-signs/5.jpg "Stopp"
-<img src="/new-traffic-signs/5.jpg " width="480" alt="Combined Image" />
+"Vorfahrtsstrasse"
+<img src="/new-traffic-signs/1.jpg " width="250" alt="Combined Image" />
+"Achtung Fussgaenger"
+<img src="/new-traffic-signs/2.jpg " width="250" alt="Combined Image" />
+"Achtung Schnee"
+<img src="/new-traffic-signs/3.jpg " width="250" alt="Combined Image" />
+"Gefaehrliche Kurve"
+<img src="/new-traffic-signs/4.jpg " width="250" alt="Combined Image" />
+"Stopp"
+<img src="/new-traffic-signs/5.jpg " width="250" alt="Combined Image" />
 
 The first image might be difficult to classify because they are not scaled to the input shape of the model. Of course that needs to be done in the first place, before preprocessing them like the training data set.
 
