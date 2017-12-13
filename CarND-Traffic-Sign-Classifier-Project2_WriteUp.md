@@ -54,9 +54,11 @@ As a first step, I decided to convert the images to grayscale because the RGB in
 Then I normalized the gray-scaled images between 0.1 and 0.9. This step is similar to the discussion in one of the TensorFlow lectures. This will prevent the model to overfit due to the large range between the values. Additional the normalization between 0.1 and 0.9 avoids possible problems by allowing data to be 0.
 
 
-### **4. Final model architecture**
+### **4. Convolutional network architecture**
 
 I used a dictionary for weights and biases to which I referred within the model. In my opinion this looks more clear.
+
+#### 4.1 Final architecture
 
 My final model consisted of the following layers:
 
@@ -73,24 +75,18 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Dropout layer			| keep_prob = 0.5								|	
 | Fully connected layer	| Input: 512, output: 128						|
-
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
 | RELU					|												|
 | Dropout layer			| keep_prob = 0.5								|	
 | Fully connected layer	| Input: 512, output: 43						|
 
-
-
-						
-									
- 
-
+										
 I implemented dropout layers after the fully connected layer to prevent overfitting of the model.
 
-3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 4.2 Training of the model
 
-*To train the model, I used the Adam optimizer and as loss function I used the softmax cross entropy with logits as cost. I minimized the cost with the Adam optimizer.*
+To train the model, I used the Adam optimizer and as loss function I used the softmax cross entropy with logits as cost. I minimized the cost with the Adam optimizer.
+
+
 
 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
